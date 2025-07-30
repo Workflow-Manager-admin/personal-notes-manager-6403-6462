@@ -1,0 +1,88 @@
+.note-editor, .note-editor-empty {
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  background: var(--bg-panel, #fff);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.note-editor-empty {
+  color: #bbb;
+  text-align: center;
+  padding: 5em 1em;
+}
+
+.note-title {
+  font-size: 1.35rem;
+  border: none;
+  border-bottom: 1.5px solid var(--border-color, #e9ecef);
+  font-weight: bold;
+  margin-bottom: 1.1rem;
+  background: transparent;
+  color: inherit;
+  outline: none;
+  transition: border 0.2s;
+  padding: 0.5em 0.2em;
+}
+.note-title:focus {
+  border-bottom: 2px solid var(--accent, #ffb300);
+}
+.note-content {
+  min-height: 280px;
+  resize: vertical;
+  border: 1px solid var(--border-color, #e9ecef);
+  background: #fafafa;
+  color: #1d1d1d;
+  font-size: 1.05rem;
+  font-family: inherit;
+  border-radius: 7px;
+  padding: 0.8em 0.95em;
+  margin-bottom: 1.3rem;
+  outline: none;
+  transition: border 0.19s;
+}
+.note-content:focus {
+  border: 1.7px solid var(--primary, #1976d2);
+}
+.note-actions {
+  display: flex;
+  gap: 1.1em;
+  margin-top: auto;
+}
+.btn-primary {
+  background: var(--primary, #1976d2);
+  color: white;
+  border: none;
+  font-size: 1.05em;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.55em 2em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-primary:disabled {
+  background: #9dbcec;
+  color: #eee;
+  cursor: not-allowed;
+}
+.btn-danger {
+  background: var(--accent, #ffb300);
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+  transition: background 0.17s;
+}
+.btn-danger:disabled {
+  background: #ffcd7a;
+  color: #fff8;
+  cursor: not-allowed;
+}
+@media (max-width: 720px) {
+  .note-editor, .note-editor-empty {
+    padding: 1.4em 1em 1em 1em;
+  }
+  .note-title { font-size: 1.1rem; }
+}
